@@ -116,6 +116,7 @@
 - Other: Medium - 3, Low - 7, Ulatr Low - 2
 
 3. For each language mentioned as having skill(value) HIGH, identify the most frequently named MEDIUM language. If you prefer use more than one query but not more than two, 1.2., feel free to create a table of languages in step 1.
+Creating table
 > DROP TABLE IF EXISTS Question CASCADE;
 > CREATE TABLE Question(	
 	LANGUAGE_ID INT NOT NULL REFERENCES LANGUAGE (LANGUAGE_ID),
@@ -123,10 +124,13 @@
 	COUNT INT NOT NULL,
 	Quest INT NOT NULL
 );
+Adding values from the question 2
 > INSERT INTO Question(LANGUAGE_ID, SKILL_LEVEL, COUNT) 
   SELECT LANGUAGE_ID, SKILL_LEVEL, Count(*)
   FROM USERLANG GROUP BY LANGUAGE_ID, SKILL_LEVEL
    ORDER BY LANGUAGE_ID;
+Adding Quest field by if it has skill value high. if yes then it is 1, if no it is 0.
 > INSERT INTO Question (Quest) VALUES (1,1,0,1,1,1,1,0,0);
-> SELECT LANGUAGE_ID, COUNT(*) FROM Question WHERE Quest = 1 ORDER BY LANGUAGE_ID;  
+Get the count of language with condition of having high skill value
+> SELECT LANGUAGE_ID, COUNT(*) FROM Question WHERE Quest = 1 AND SKILL_LEVEL = 2 ORDER BY LANGUAGE_ID;  
 - JavaScript

@@ -99,10 +99,12 @@
 (40,1,1,NULL),(40,9,2,'.NET'),(40,4,3,NULL);
 
 
-##Questions
+## Questions
 1. What is the most frequently mentioned first language?
-- Java
+> SELECT LANGUAGE_ID, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID ORDER BY LANGUAGE_ID; 
+     Java
 2. What are the counts of all languages at all ranks? List them using language names and rank names (low medium high)
+> SELECT LANGUAGE_ID, SKILL_LEVEL, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID, SKILL_LEVEL ORDER BY LANGUAGE_ID; 
 - Java: High - 34, Medium - 1
 - JavaScript: High - 1, Medium - 4
 - C++: Medium - 22, Low - 4

@@ -1,9 +1,8 @@
 ## MySQL to PostgreSQL
-> CREATE OR REPLACE FUNCTION f_drop_db(dbname text)
->  RETURNS text LANGUAGE sql AS
+> CREATE OR REPLACE FUNCTION f_drop_db(dbname text) RETURNS text LANGUAGE sql AS
 > $func$
 > SELECT dblink_exec('port=5432 dbname=standup'
->                  ,'DROP DATABASE ' || quote_ident(dbname))
+                 ,'DROP DATABASE ' || quote_ident(dbname))
 > $func$;
 > -- CREATE DATABASE standup
 > --     WITH 

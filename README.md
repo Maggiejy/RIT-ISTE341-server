@@ -102,7 +102,7 @@
 ## Questions
 1. What is the most frequently mentioned first language?
 > SELECT LANGUAGE_ID, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID ORDER BY LANGUAGE_ID; 
-     Java
+- Java
 2. What are the counts of all languages at all ranks? List them using language names and rank names (low medium high)
 > SELECT LANGUAGE_ID, SKILL_LEVEL, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID, SKILL_LEVEL ORDER BY LANGUAGE_ID; 
 - Java: High - 34, Medium - 1
@@ -116,4 +116,17 @@
 - Other: Medium - 3, Low - 7, Ulatr Low - 2
 
 3. For each language mentioned as having skill(value) HIGH, identify the most frequently named MEDIUM language. If you prefer use more than one query but not more than two, 1.2., feel free to create a table of languages in step 1.
+> DROP TABLE IF EXISTS Question CASCADE;
+> CREATE TABLE Question(	
+	LANGUAGE_ID INT NOT NULL REFERENCES LANGUAGE (LANGUAGE_ID),
+	SKILL_LEVEL INT NOT NULL REFERENCES SKILL (SKILL_ID),
+	COUNT INT NOT NULL,
+	Quest INT NOT NULL
+);
+> INSERT INTO Question(LANGUAGE_ID, SKILL_LEVEL, COUNT) 
+  SELECT LANGUAGE_ID, SKILL_LEVEL, Count(*)
+  FROM USERLANG GROUP BY LANGUAGE_ID, SKILL_LEVEL
+   ORDER BY LANGUAGE_ID;
+> INSERT INTO Question (Quest) VALUES (1,1,0,1,1,1,1,0,0);
+> SELECT LANGUAGE_ID, COUNT(*) FROM Question WHERE Quest = 1 ORDER BY LANGUAGE_ID;  
 - JavaScript

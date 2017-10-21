@@ -34,6 +34,8 @@
 );
 
 > DROP TABLE IF EXISTS USERLANG CASCADE;
+
+
 > CREATE TABLE USERLANG(
 	USERLANG_ID SERIAL PRIMARY KEY,
 	STUDENT_ID INT NOT NULL REFERENCES STUDENT (STUDENT_ID),
@@ -43,6 +45,8 @@
 );
 
 >INSERT INTO STUDENT VALUES
+
+
 ('AA', 1,1),('AB', 2,1),('AC', 3,1),('AD', 4,1),('AE', 5,1),
 ('AF', 6,1),('AG', 7,1),('AH', 8,1),('AI', 9,1),('AJ', 10,1),
 ('AK', 11,1),('AL', 12,1),('AM', 13,1),('AN', 14,1),('AO', 15,1),('AP', 16,1),
@@ -54,6 +58,8 @@
 >INSERT INTO SKILL VALUES(1,'HIGH'), (2, 'MEDIUM'), (3, 'LOW'), (4,'ULTRA LOW');
 
 >INSERT INTO LANGUAGE VALUES
+
+
 ('JAVA', 1),('JAVASCRIPT', 2),('C++', 3),('C', 4),('C#', 5),('PYTHON', 6),('PHP', 7),('COBOL', 8),('OTHER', 9);
 
 >INSERT INTO USERLANG (STUDENT_ID, LANGUAGE_ID,SKILL_LEVEL,NOTES) VALUES
@@ -103,6 +109,8 @@
 1. What is the most frequently mentioned first language?
 > SELECT LANGUAGE_ID, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID ORDER BY LANGUAGE_ID; 
 - Java
+
+
 2. What are the counts of all languages at all ranks? List them using language names and rank names (low medium high)
 > SELECT LANGUAGE_ID, SKILL_LEVEL, Count(*) FROM USERLANG GROUP BY LANGUAGE_ID, SKILL_LEVEL ORDER BY LANGUAGE_ID; 
 - Java: High - 34, Medium - 1
@@ -115,10 +123,11 @@
 - Cobol: Medium - 1
 - Other: Medium - 3, Low - 7, Ulatr Low - 2
 
+
 3. For each language mentioned as having skill(value) HIGH, identify the most frequently named MEDIUM language. If you prefer use more than one query but not more than two, 1.2., feel free to create a table of languages in step 1.
+
+
 Creating table
-
-
 > DROP TABLE IF EXISTS Question CASCADE;
 > CREATE TABLE Question(	
 	LANGUAGE_ID INT NOT NULL REFERENCES LANGUAGE (LANGUAGE_ID),

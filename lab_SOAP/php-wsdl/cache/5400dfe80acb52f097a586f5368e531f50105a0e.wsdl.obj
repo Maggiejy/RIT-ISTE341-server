@@ -1,0 +1,76 @@
+a:11:{s:7:"version";s:3:"2.3";s:7:"methods";a:5:{i:0;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:0:{}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";s:6:"$hello";s:4:"GUID";s:13:"59fc83eee8951";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59fc83eee89c1";s:4:"Name";s:10:"helloWorld";s:4:"Docs";s:11:"Say "hello"";s:8:"Settings";N;}i:1;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:2:{i:0;O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8a58";s:4:"Name";s:5:"width";s:8:"Settings";N;}i:1;O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8aba";s:4:"Name";s:6:"height";s:8:"Settings";N;}}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";s:5:"$area";s:4:"GUID";s:13:"59fc83eee8b18";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59fc83eee8b73";s:4:"Name";s:13:"calcRectangle";s:4:"Docs";s:33:"Calculate the area of a rectangle";s:8:"Settings";N;}i:2;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:1:{i:0;O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8bf8";s:4:"Name";s:6:"radius";s:8:"Settings";N;}}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";s:5:"$area";s:4:"GUID";s:13:"59fc83eee8c58";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59fc83eee8cb1";s:4:"Name";s:10:"calcCircle";s:4:"Docs";s:30:"Calculate the area of a circle";s:8:"Settings";N;}i:3;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:2:{i:0;O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8d34";s:4:"Name";s:4:"name";s:8:"Settings";N;}i:1;O:12:"PhpWsdlParam":5:{s:4:"Type";s:3:"int";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8d96";s:4:"Name";s:3:"age";s:8:"Settings";N;}}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";s:12:"$nameWithAge";s:4:"GUID";s:13:"59fc83eee8df3";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59fc83eee8e4c";s:4:"Name";s:14:"getNameWithAge";s:4:"Docs";N;s:8:"Settings";N;}i:4;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:1:{i:0;O:12:"PhpWsdlParam":5:{s:4:"Type";s:3:"int";s:4:"Docs";N;s:4:"GUID";s:13:"59fc83eee8ecb";s:4:"Name";s:3:"max";s:8:"Settings";N;}}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:8:"string[]";s:4:"Docs";s:6:"$count";s:4:"GUID";s:13:"59fc83eee8f29";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59fc83eee8f82";s:4:"Name";s:7:"countTo";s:4:"Docs";N;s:8:"Settings";N;}}s:5:"types";a:0:{}s:5:"files";a:1:{i:0;s:15:"AreaService.php";}s:4:"name";s:11:"AreaService";s:4:"docs";N;s:4:"html";s:3748:"<html>
+<head>
+<title>AreaService interface description</title>
+<style type="text/css" media="all">
+body{font-family:Calibri,Arial;background-color:#fefefe;}
+.pre{font-family:Courier;}
+.normal{font-family:Calibri,Arial;}
+.bold{font-weight:bold;}
+h1,h2,h3{font-family:Verdana,Times;}
+h1{border-bottom:1px solid gray;}
+h2{border-bottom:1px solid silver;}
+h3{border-bottom:1px dashed silver;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.blue{color:#3400FF;}
+.lightBlue{color:#5491AF;}
+</style>
+<style type="text/css" media="print">
+.noprint{display:none;}
+</style>
+</head>
+<body>
+<h1>AreaService SOAP WebService interface description</h1>
+<p>Endpoint URI: <span class="pre">http://serenity.ist.rit.edu/~bdfvks/341/soap/phpServer01.php</span></p>
+<p>WSDL URI: <span class="pre"><a href="http://serenity.ist.rit.edu/~bdfvks/341/soap/phpServer01.php?WSDL&readable">http://serenity.ist.rit.edu/~bdfvks/341/soap/phpServer01.php?WSDL</a></span></p>
+<p>PHP SOAP client download URI: <span class="pre"><a href="http://serenity.ist.rit.edu/~bdfvks/341/soap/phpServer01.php?PHPSOAPCLIENT">http://serenity.ist.rit.edu/~bdfvks/341/soap/phpServer01.php?PHPSOAPCLIENT</a></span></p>
+<div class="noprint">
+<h2>Index</h2>
+<p>Public methods:</p>
+<ul>
+<li><a href="#calcCircle"><span class="pre">calcCircle</span></a></li>
+<li><a href="#calcRectangle"><span class="pre">calcRectangle</span></a></li>
+<li><a href="#countTo"><span class="pre">countTo</span></a></li>
+<li><a href="#getNameWithAge"><span class="pre">getNameWithAge</span></a></li>
+<li><a href="#helloWorld"><span class="pre">helloWorld</span></a></li>
+</ul>
+</div>
+<h2>Public methods</h2>
+<h3>calcCircle</h3>
+<a name="calcCircle"></a>
+<p class="pre"><span class="blue">double</span> <span class="bold">calcCircle</span> (
+<span class="blue">double</span> <span class="bold">radius</span>
+)</p>
+<p>Calculate the area of a circle</p>
+<p>Return value <span class="pre"><span class="blue">double</span></span>: $area</p>
+<h3>calcRectangle</h3>
+<a name="calcRectangle"></a>
+<p class="pre"><span class="blue">double</span> <span class="bold">calcRectangle</span> (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">double</span> <span class="bold">width</span>, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">double</span> <span class="bold">height</span><br>
+)</p>
+<p>Calculate the area of a rectangle</p>
+<p>Return value <span class="pre"><span class="blue">double</span></span>: $area</p>
+<h3>countTo</h3>
+<a name="countTo"></a>
+<p class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a> <span class="bold">countTo</span> (
+<span class="blue">int</span> <span class="bold">max</span>
+)</p>
+<p>Return value <span class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a></span>: $count</p>
+<h3>getNameWithAge</h3>
+<a name="getNameWithAge"></a>
+<p class="pre"><span class="blue">string</span> <span class="bold">getNameWithAge</span> (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">string</span> <span class="bold">name</span>, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">int</span> <span class="bold">age</span><br>
+)</p>
+<p>Return value <span class="pre"><span class="blue">string</span></span>: $nameWithAge</p>
+<h3>helloWorld</h3>
+<a name="helloWorld"></a>
+<p class="pre"><span class="blue">string</span> <span class="bold">helloWorld</span> (
+)</p>
+<p>Say &quot;hello&quot;</p>
+<p>Return value <span class="pre"><span class="blue">string</span></span>: $hello</p>
+<hr>
+<p><small>Powered by <a href="http://code.google.com/p/php-wsdl-creator/">PhpWsdl</a><span class="noprint"> - PDF download: <a href="http://online.htmltopdf.de/?plain=1&filename=AreaService-webservices.pdf&print=1">Download this page as PDF</a></span></small></p>
+</body>
+</html>";s:3:"php";N;s:7:"wsdluri";N;s:6:"phpuri";N;s:6:"docuri";N;}

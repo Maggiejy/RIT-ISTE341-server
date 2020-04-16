@@ -1,0 +1,73 @@
+a:11:{s:7:"version";s:3:"2.3";s:7:"methods";a:5:{i:0;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:0:{}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:8:"string[]";s:4:"Docs";s:8:"$methods";s:4:"GUID";s:13:"59404e3117b79";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59404e3117bd5";s:4:"Name";s:10:"GetMethods";s:4:"Docs";s:17:"Available methods";s:8:"Settings";N;}i:1;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:0:{}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:8:"string[]";s:4:"Docs";s:9:"$products";s:4:"GUID";s:13:"59404e3117c9a";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59404e3117d12";s:4:"Name";s:11:"GetProducts";s:4:"Docs";s:18:"Available products";s:8:"Settings";N;}i:2;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:1:{i:0;O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";N;s:4:"GUID";s:13:"59404e3117dd3";s:4:"Name";s:7:"product";s:8:"Settings";N;}}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"double";s:4:"Docs";s:6:"$price";s:4:"GUID";s:13:"59404e3117e50";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59404e3117ec8";s:4:"Name";s:8:"GetPrice";s:4:"Docs";s:26:"Get the price of a product";s:8:"Settings";N;}i:3;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:0:{}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";s:9:"$cheapest";s:4:"GUID";s:13:"59404e3117f83";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59404e3118004";s:4:"Name";s:11:"GetCheapest";s:4:"Docs";s:24:"Get the cheapest product";s:8:"Settings";N;}i:4;O:13:"PhpWsdlMethod":7:{s:5:"Param";a:0:{}s:6:"Return";O:12:"PhpWsdlParam":5:{s:4:"Type";s:6:"string";s:4:"Docs";s:10:"$costliest";s:4:"GUID";s:13:"59404e31180bf";s:4:"Name";s:6:"return";s:8:"Settings";N;}s:8:"IsGlobal";b:0;s:4:"GUID";s:13:"59404e3118137";s:4:"Name";s:12:"GetCostliest";s:4:"Docs";s:24:"Get the costlies product";s:8:"Settings";N;}}s:5:"types";a:0:{}s:5:"files";a:1:{i:0;s:18:"ProductService.php";}s:4:"name";s:14:"ProductService";s:4:"docs";N;s:4:"html";s:3395:"<html>
+<head>
+<title>ProductService interface description</title>
+<style type="text/css" media="all">
+body{font-family:Calibri,Arial;background-color:#fefefe;}
+.pre{font-family:Courier;}
+.normal{font-family:Calibri,Arial;}
+.bold{font-weight:bold;}
+h1,h2,h3{font-family:Verdana,Times;}
+h1{border-bottom:1px solid gray;}
+h2{border-bottom:1px solid silver;}
+h3{border-bottom:1px dashed silver;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.blue{color:#3400FF;}
+.lightBlue{color:#5491AF;}
+</style>
+<style type="text/css" media="print">
+.noprint{display:none;}
+</style>
+</head>
+<body>
+<h1>ProductService SOAP WebService interface description</h1>
+<p>Endpoint URI: <span class="pre">http://129.21.17.171/~bdfvks/341/soap/ProductServer.php</span></p>
+<p>WSDL URI: <span class="pre"><a href="http://129.21.17.171/~bdfvks/341/soap/ProductServer.php?WSDL&readable">http://129.21.17.171/~bdfvks/341/soap/ProductServer.php?WSDL</a></span></p>
+<p>PHP SOAP client download URI: <span class="pre"><a href="http://129.21.17.171/~bdfvks/341/soap/ProductServer.php?PHPSOAPCLIENT">http://129.21.17.171/~bdfvks/341/soap/ProductServer.php?PHPSOAPCLIENT</a></span></p>
+<div class="noprint">
+<h2>Index</h2>
+<p>Public methods:</p>
+<ul>
+<li><a href="#GetCheapest"><span class="pre">GetCheapest</span></a></li>
+<li><a href="#GetCostliest"><span class="pre">GetCostliest</span></a></li>
+<li><a href="#GetMethods"><span class="pre">GetMethods</span></a></li>
+<li><a href="#GetPrice"><span class="pre">GetPrice</span></a></li>
+<li><a href="#GetProducts"><span class="pre">GetProducts</span></a></li>
+</ul>
+</div>
+<h2>Public methods</h2>
+<h3>GetCheapest</h3>
+<a name="GetCheapest"></a>
+<p class="pre"><span class="blue">string</span> <span class="bold">GetCheapest</span> (
+)</p>
+<p>Get the cheapest product</p>
+<p>Return value <span class="pre"><span class="blue">string</span></span>: $cheapest</p>
+<h3>GetCostliest</h3>
+<a name="GetCostliest"></a>
+<p class="pre"><span class="blue">string</span> <span class="bold">GetCostliest</span> (
+)</p>
+<p>Get the costlies product</p>
+<p>Return value <span class="pre"><span class="blue">string</span></span>: $costliest</p>
+<h3>GetMethods</h3>
+<a name="GetMethods"></a>
+<p class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a> <span class="bold">GetMethods</span> (
+)</p>
+<p>Available methods</p>
+<p>Return value <span class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a></span>: $methods</p>
+<h3>GetPrice</h3>
+<a name="GetPrice"></a>
+<p class="pre"><span class="blue">double</span> <span class="bold">GetPrice</span> (
+<span class="blue">string</span> <span class="bold">product</span>
+)</p>
+<p>Get the price of a product</p>
+<p>Return value <span class="pre"><span class="blue">double</span></span>: $price</p>
+<h3>GetProducts</h3>
+<a name="GetProducts"></a>
+<p class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a> <span class="bold">GetProducts</span> (
+)</p>
+<p>Available products</p>
+<p>Return value <span class="pre"><a href="#string[]"><span class="lightBlue">string[]</span></a></span>: $products</p>
+<hr>
+<p><small>Powered by <a href="http://code.google.com/p/php-wsdl-creator/">PhpWsdl</a><span class="noprint"> - PDF download: <a href="http://online.htmltopdf.de/?plain=1&filename=ProductService-webservices.pdf&print=1">Download this page as PDF</a></span></small></p>
+</body>
+</html>";s:3:"php";N;s:7:"wsdluri";N;s:6:"phpuri";N;s:6:"docuri";N;}

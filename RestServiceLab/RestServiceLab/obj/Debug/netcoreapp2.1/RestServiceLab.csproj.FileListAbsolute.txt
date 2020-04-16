@@ -1,0 +1,14 @@
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.csprojAssemblyReference.cache
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.csproj.CoreCompileInputs.cache
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.RazorAssemblyInfo.cache
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.RazorAssemblyInfo.cs
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.AssemblyInfoInputs.cache
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.AssemblyInfo.cs
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/bin/Debug/netcoreapp2.1/RestServiceLab.deps.json
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/bin/Debug/netcoreapp2.1/RestServiceLab.runtimeconfig.json
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/bin/Debug/netcoreapp2.1/RestServiceLab.runtimeconfig.dev.json
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/bin/Debug/netcoreapp2.1/RestServiceLab.dll
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/bin/Debug/netcoreapp2.1/RestServiceLab.pdb
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.RazorTargetAssemblyInfo.cache
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.dll
+/Users/Student/Desktop/RestServiceLab/RestServiceLab/obj/Debug/netcoreapp2.1/RestServiceLab.pdb

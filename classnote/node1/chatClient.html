@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Node Chat Client</title>
+        <style>
+        	* { 
+        			font-family:tahoma; 
+        			font-size:12px; 
+        			padding:0px; 
+        			margin:0px; 
+        		}
+        	p { 
+        			line-height:18px; 
+        		}
+        	div { 
+        			width:500px; 
+        			margin-left:auto; 
+        			margin-right:auto;}
+        	.box { 
+        			padding:5px; 
+        			background:#ddd; 
+        			border-radius:5px; 
+        			overflow-y: scroll;
+                   border:1px solid #CCC; 
+                   margin-top:10px; 
+                   height: 160px; 
+            }
+        	#message { 
+        		border-radius:2px; 
+        		border:1px solid #ccc;
+                 margin-top:10px; 
+                 padding:5px; 
+                 width:385px;  
+            }
+            .inline {
+            	display: inline;
+            }
+        </style>
+</head>
+<body>
+        <div id="chatlog" class="box"></div>
+        <div>
+            <span id="status">Message:</span>
+            <input type="text" id="message"  />
+            <input type="button" value="send" class="inline" onclick="sendMessage()"/>
+        </div>
+        <script>
+        	//var ws = new WebSocket('ws://bfrench-websocketexample.herokuapp.com:22039'); 
+        	//var HOST = location.origin.replace(/^https/, 'wss')
+			var ws = new WebSocket('ws://localhost:1234');
+			
+        	ws.onopen = function () {
+        		console.log("connected!!!");
+    		};
+    		
+    		ws.onerror = function (error) {
+            	console.log("error: "+error);
+    		};
+
+
+        	function sendMessage(){     
+				var message = document.getElementById('message').value; 
+				console.log(message);    
+				ws.send(message); 
+			
+			}
+			
+			ws.addEventListener("message", function(e) {     
+				 // The data is simply the message that we're sending back     
+				 var msg = e.data;      
+
+				 // Append the message     
+				 var p = document.createElement("p");
+				 var message = document.createTextNode(msg);
+				 p.appendChild(message);
+				 document.getElementById('chatlog').appendChild(p); 
+			}); 
+        </script>
+</body>
+</html>

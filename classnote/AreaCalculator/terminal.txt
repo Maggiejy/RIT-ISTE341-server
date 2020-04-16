@@ -1,0 +1,15 @@
+1. jar cvf JinAreaCalculator.war WEB-INF
+2. new window
+3. cd /Applications/wildfly/bin
+4. sudo ./add-user.sh
+5. Password: student
+6. a
+7. yes,space,yes,yes,yes
+8. sudo ./standalone.sh
+
+open google chrome and enter localhost:8080 check if wildfly is there
+redirect to localhost:9990 and click on Deployment
+upload Deployment of the war file that created before 
+after it successfully deployed  then open http://localhost:8080/JinAreaCalculator/resources/AreaCalculator/Hello
+
+then use postman to check it out

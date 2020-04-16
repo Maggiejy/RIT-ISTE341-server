@@ -1,0 +1,170 @@
+11-20
+docker -v
+sudo docker info
+sudo docker run hello-world
+sudo docker container ls -all
+sudo docker run -ti ubuntu:latest bash
+cat /etc/lsb-release
+exit or control-d
+sudo docker run -ti ubuntu:latest bash
+touch MY-FILE
+exit
+sudo docker ps -a 
+sudo docker commit NAMES //save the image in the container
+sudo docker images
+sudo docker tag IMAGE_ID tag_name
+sudo docker run -ti tag_name bash
+
+/*in another terminal window*/
+sudo docker ps
+sudo docker run -ti ubuntu:latest bash 
+ls //the MY-FILE file is not in the folder
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+11/22
+sudo docker run --rm -ti ubuntu sleep 5
+sudo docker run -ti ubuntu bash -c "sleep 3; echo all done"
+sudo docker run -d -ti ubuntu bash //detached
+sudo docker attach NAMES // the container would be running and executed at the same time
+Control-D //exit the container and kisses out everyone who is in the container
+----------------------------------------------------------------------------------------
+sudo docker run --name example -d ubuntu bash -c "lose /etc/password"
+sudo docker logs example
+sudo docker run -ti ubuntu bash
+----------------------------------------------------------------------------------------
+sudo docker run --rm -ti -p 45679:45679 --name echo-server ubuntu:14.04 bash
+nc -lp 45678 | nc -lp 45679
+Control-C
+Exit
+----------------------------------------------------------------------------------------
+sudo docker run --rm -ti -p 45678:45679 --name echo-server ubuntu:14.04 bash
+
+
+/*In other terminal window*/
+sudo docker attach NAMES
+Control-P Control-Q leave the container running 
+sudo docker exec -ti NAMES bash
+touch foo
+----------------------------------------------------------------------------------------
+sudo docker ps
+sudo docker kill NAMES
+sudo docker ps -l
+sudo docker rm NAMES
+sudo docker ps -all
+----------------------------------------------------------------------------------------
+sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' echo-server
+nc 172.17.0.2 45679
+Control-C
+----------------------------------------------------------------------------------------
+sudo docker port echo-server
+
+
+11/25
+sudo docker run -ti --rm --name server ubuntu:14.04 bash
+nc -lp 1234
+----------------------------------------------------------------------------------------
+sudo docker network create example
+sudo docker run -ti --rm --net=example --name server ubuntu:14.04 bash
+nc -lp 1234
+----------------------------------------------------------------------------------------
+sudo docker images
+sudo docker rm $(sudo docker ps -a -q) //stop all the containers
+sudo docker rmi hello-world
+mkdir example
+sudo docker run -ti -v /home/student/example:/shared-folder ubuntu bash
+touch MY-DATA
+exit
+cd example/ //MY-DATA is in the folder 
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+sudo docker run -ti -v /shared-data ubuntu bash
+echo hello > /shared-data/data-file
+----------------------------------------------------------------------------------------
+mkdir dfexample
+vscode Dockerfile
+    FROM busybox 
+
+    RUN echo "building simple docker image"
+
+    CMD echo "hello container"
+sudo docker build -t hello .
+sudo docker run --rm hello
+    FROM debian:sid 
+    
+    RUN apt-get -y update
+    
+    RUN apt-get -y install nano
+    
+    CMD ["/bin/nano","/tmp/notes"]
+sudo docker build -t example/nanoer .
+sudo docker run -ti --rm example/nanoer
+
+/*In other terminal window*/
+sudo docker run --rm -ti --link server --name client ubuntu:14.04 bash
+nc server 1234
+----------------------------------------------------------------------------------------
+sudo docker run --rm -ti --link server --net=example --name client ubuntu:14.04 bash
+nc server 1234
+----------------------------------------------------------------------------------------
+sudo docker ps -l
+sudo docker run -ti --volumes-from xenodochial_elion ubuntu bash
+----------------------------------------------------------------------------------------
+
+
+
+12/02
+vscode Dockerfile
+    FROM debian:sid 
+    
+    RUN apt-get -y update
+    
+    RUN apt-get -y install nano
+    
+    CMD ["/bin/nano","/tmp/notes"]
+sudo docker build -t example/nanoer .
+sudo docker run -ti --rm example/nanoer
+----------------------------------------------------------------------------------------
+    FROM example/nanoer
+
+    ADD notes.txt /notes.txt
+    
+    CMD ["/bin/nano","/notes.txt"]
+sudo docker build -t example/notes .
+sudo docker run -ti --rm example/notes
+----------------------------------------------------------------------------------------
+mkdir compose
+cd compose
+vscode docker-compose.yml
+    version: '3'
+
+    services:
+      db:
+        image: mysql:5.7
+        volumes:
+          -db_data:/var/lib/mysql
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: somewordpress
+          MYSQL_DATABASE: wordpress
+          MYSQL_USER: wordpress
+          MYSQL_PASSWORD: wordpress
+      wordpress:
+        depends_on:
+          - db
+        image: wordpress:latest
+        ports:
+          - "8000:80"
+        restart: always
+        environment:
+          WORDPRESS_DB_HOST: db:3306
+          WORDPRESS_DB_USER: wordpress
+          WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      db_data:
+sudo docker-compose up -d
+ip address show ens33
+
+http://localhost:8000/wordpress
+
+sudo docker-compose down

@@ -1,0 +1,64 @@
+<html>
+<head><TITLE>jSon Tutorial</TITLE>
+	<script src="json2.js"></script>
+	<script>
+		function validate()
+		{
+			var p = document.forms['personal'];
+		 
+			var JSONObject = new Object;
+			JSONObject.firstname = p['firstname'].value;
+			JSONObject.email = p['email'].value;
+			JSONObject.hobby = new Array;
+		 
+			for(var i=0; i<3; i++)
+			{
+				JSONObject.hobby[i] = new Object;
+				JSONObject.hobby[i].hobbyName = p['hobby'][i].value;
+				JSONObject.hobby[i].isHobby = p['hobby'][i].checked;
+			}
+		 
+			JSONstring = "json="+JSON.stringify(JSONObject);
+			xmlhttpPost(JSONstring);
+		 
+		}
+		function xmlhttpPost(str) {
+			var xmlHttpReq = false;
+			var self = this;
+			// Mozilla/Safari
+			if (window.XMLHttpRequest) {
+				self.xmlHttpReq = new XMLHttpRequest();
+			}
+			// IE
+			else if (window.ActiveXObject) {
+				self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			self.xmlHttpReq.open('POST', "parser.php", true);
+			self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			self.xmlHttpReq.onreadystatechange = function() {
+				if (self.xmlHttpReq.readyState == 4) {
+					updatepage(self.xmlHttpReq.responseText);
+				}
+			}
+			self.xmlHttpReq.send(str);
+		}
+		
+		
+		function updatepage(str){
+			document.getElementById("result").innerHTML = str;
+		}
+	</script>
+</head>
+<body>
+<form name="personal" action="" method="POST">
+	Name <input type="text" name="firstname"><br>
+	Email <input type="text" name="email"><br>
+	Hobby 
+	<input type="checkbox" name="hobby" value="sport"> Sport
+	<input type="checkbox" name="hobby" value="reading"> Reading
+	<input type="checkbox" name="hobby" value="music"> Music
+	<input type="button" name="valid" value="Validate" onclick="validate()">
+</form>
+<div id="result"></div>
+</body>
+</html>
